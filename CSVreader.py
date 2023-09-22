@@ -1,3 +1,5 @@
+import os
+
 def parseCSV(file):
     with open(file, "r") as f:
         CSVtable = []
@@ -8,7 +10,7 @@ def parseCSV(file):
             CSVtable.append(currentLine)
         return CSVtable
 
-CSV = parseCSV("C:/Users/miles/Desktop/Sean's Coding/Python/CSVFunction/ExampleCSV.csv")
+CSV = parseCSV(os.getcwd() + "\ExampleCSV.csv")
 
 for i in range(len(CSV)):
     print(CSV[i][0],CSV[i][2],CSV[i][2])
